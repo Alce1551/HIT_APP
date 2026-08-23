@@ -29,3 +29,37 @@ La app inicia en modo demo si Firebase no está configurado correctamente. El mo
 - Contraseña: demo123
 
 En modo demo las credenciales son simuladas y no se envían a ningún servicio.
+
+
+
+# Hotel Incident Tracker (HIT)
+
+Flutter mobile application for recording, viewing, updating, and deleting hotel operational incidents, based on A5_ALCE and the Project Integrator Stage 3 instructions.
+
+## Requirements Covered
+- Incident CRUD operations.
+- Firebase Firestore as the cloud database.
+- Firebase Authentication prepared for user login.
+- Firebase Storage prepared for photo uploads.
+- Firebase Cloud Messaging prepared for notifications.
+- Roles: Front Desk, Housekeeping, Cleaning, Maintenance, Supervisor, and Management.
+- Dashboard with pending, in progress, completed, and critical incidents.
+- History with filters.
+- Incident details, comments, status changes, and closure.
+- Local demo mode to run and test the interface before connecting Firebase.
+
+## Firebase Configuration
+1. Install Flutter and run flutter pub get.
+2. Install the FlutterFire CLI and run flutterfire configure from this directory.
+3. This will generate lib/firebase_options.dart.
+4. In Firebase, enable Authentication (Email/Password), Firestore, and Storage.
+5. Review and apply the rules in firebase/firestore.rules and firebase/storage.rules.
+6. Run flutter run.
+
+The app starts in demo mode if Firebase is not configured correctly. Demo mode allows you to validate the CRUD functionality using in-memory data; once Firebase is connected, operations are performed in Firestore.
+
+## Demo Credentials
+- Username: demo@hit.local
+- Password: demo123
+
+In demo mode, the credentials are simulated and are not sent to any external service.
